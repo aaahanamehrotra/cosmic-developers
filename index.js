@@ -3,6 +3,7 @@ const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 
 app = express()
+app.use(express.static(__dirname + '/public'));
 require('dotenv').config()
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
